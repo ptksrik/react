@@ -22,10 +22,6 @@ function App() {
     else {
       alcoholLevel = gramsRemaining / (weight * 0.6);
     }
-
-    if (alcoholLevel < 0) {
-      alcoholLevel = 0;
-    }
     setResult(alcoholLevel);
   }
 
@@ -48,7 +44,7 @@ function App() {
             </div>
             <div className="row my-2">
               <div className="col-md-2 col-sm-12">Time</div>
-              <input className="col-md-1 p-2 bg-light" name="time" type="number" min="0" value={time} onChange={e => setTime(e.target.value)}>
+              <input className="col-md-1 p-2 bg-light" name="time" type="number" min="0" step="0.5" value={time} onChange={e => setTime(e.target.value)}>
               </input>
             </div>
             <div className="row my-2">
